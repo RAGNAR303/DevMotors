@@ -3,6 +3,7 @@ import styles from "./styles.module.scss";
 import { getDataHome } from "@/utils/api/get-data";
 import { HomeProps } from "@/utils/type/home.type";
 import { PiWhatsappLogoDuotone } from "react-icons/pi";
+import { About } from "@/components/about";
 export default async function Home() {
   const { object }: HomeProps = await getDataHome();
 
@@ -14,10 +15,7 @@ export default async function Home() {
         <Hero data={object.metadata} icon={<PiWhatsappLogoDuotone />} />
 
         <section className={`${styles.section}`}>
-          <h2>hero</h2>
-        </section>
-        <section className={`${styles.section}`}>
-          <h2>hero</h2>
+          <About object={object} />
         </section>
       </div>
     </main>
