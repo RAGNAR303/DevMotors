@@ -1,0 +1,39 @@
+export interface HomeProps {
+    object: {
+        slug: string,
+        title: string,
+        metadata: {
+            banner: {
+                url: string,
+
+            },
+            heading: string,
+            ctabutton: {
+                title: string,
+                url: string
+            },
+            about: {
+                description: string,
+                banner: {
+                    url: string,
+
+                }
+            },
+            services: ServiceProps[]
+            contact: {
+                email: string,
+                phone: string,
+                address: string,
+                time: string
+            }
+        }
+    }
+}
+
+
+interface ServiceProps {
+    image: {
+        url: string,
+},
+    title: string
+}
