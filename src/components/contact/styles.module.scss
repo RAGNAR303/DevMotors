@@ -1,0 +1,61 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    margin: 40px 0;
+    padding: 20px;
+    gap: 30px;
+
+
+
+
+
+    .containerContact {
+        background: #0a0a0a;
+        background: linear-gradient(300deg, #000000 0%, #3c3c3c 100%) padding-box, linear-gradient(-300deg, #000000, #3c3c3c) border-box;
+        width: 100%;
+        max-width: 800px;
+        min-height: 250px;
+        margin: auto;
+        border-radius: 5px;
+        padding: 10px;
+        border: 4px solid transparent;
+
+        .title {
+            color: white;
+            text-align: center;
+        }
+
+        .contact {
+            width: 100%;
+            height: 100%;
+            gap: 10px;
+            padding: 30px;
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: space-between;
+        }
+    }
+
+    .link {
+        display: flex;
+        align-items: center;
+        gap: 5px;
+        font-size: 20px;
+        color: white;
+        background-color: #008f00;
+        padding: 5px 25px;
+        border-radius: 5px;
+        font-weight: lighter;
+        box-shadow: 1px 2px 10px #00000084 inset 1px 2px 10px #00000084;
+        -webkit-box-shadow: 1px 2px 10px #00000084;
+        -moz-box-shadow: 1px 2px 10px #00000084;
+        transition: all 0.5s ease-in-out;
+    }
+
+    .link:hover {
+        transform: scale(1.05);
+    }
+}

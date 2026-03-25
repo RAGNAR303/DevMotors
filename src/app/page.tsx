@@ -4,6 +4,7 @@ import { getDataHome } from "@/utils/api/get-data";
 import { HomeProps } from "@/utils/type/home.type";
 import { PiWhatsappLogoDuotone } from "react-icons/pi";
 import { About } from "@/components/about";
+import { Contact } from "@/components/contact";
 export default async function Home() {
   const { object }: HomeProps = await getDataHome();
 
@@ -16,6 +17,8 @@ export default async function Home() {
 
         <section className={`${styles.section}`}>
           <About object={object} />
+
+          <Contact object={object} />
         </section>
       </div>
     </main>
