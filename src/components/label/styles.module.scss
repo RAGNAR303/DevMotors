@@ -7,21 +7,54 @@
 
     i {
         font-size: 35px;
-       
+
     }
 
     .containerLabel {
         flex-grow: 2;
 
 
-        label {
+        strong {
             font-size: 16px;
-            font-weight: 900;
-        }
 
+        }
 
         p {
             font-size: 12px;
         }
     }
+}
+
+
+@media screen and (max-width:640px) {
+
+
+    .container {
+        color: white;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 5px;
+
+        i {
+            font-size: 35px;
+
+        }
+
+        .containerLabel {
+            flex-grow: 2;
+
+
+            label {
+                font-size: 14px;
+                font-weight: 900;
+            }
+
+
+            p {
+                font-size: 10px;
+            }
+        }
+    }
+
 }

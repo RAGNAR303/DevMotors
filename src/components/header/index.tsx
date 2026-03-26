@@ -2,7 +2,8 @@
 import { useState, useEffect } from "react";
 import Link from "next/link";
 import styles from "./styles.module.scss";
-import { Menu, X } from "lucide-react";
+import { HiMenuAlt4 } from "react-icons/hi";
+import { IoClose } from "react-icons/io5";
 import { SubMenu } from "../submenu";
 
 export function Header({ home }: { home: boolean }) {
@@ -26,29 +27,29 @@ export function Header({ home }: { home: boolean }) {
     >
       <div className={styles.menu}>
         <div className={styles.container}>
-          <Link href={"/"}>
+          <Link href={"/#home"}>
             <h2>DEVMOTORS</h2>
           </Link>
 
           <nav className={styles.navItem}>
-            <Link href={"/"}>HOME</Link>
-            <Link href={"/#servicos"}>SERVIÇOS</Link>
-            <Link href={"/#contatos"}>CONTATOS</Link>
+            <Link href={"/#home"}>HOME</Link>
+            <Link href={"/#about"}>SERVIÇOS</Link>
+            <Link href={"/#contact"}>CONTATOS</Link>
           </nav>
         </div>
 
         <button className={styles.hiddenMenu} onClick={() => setOpen(!open)}>
-          {open ? <X /> : <Menu />}
+          {open ? <IoClose /> : <HiMenuAlt4 />}
         </button>
       </div>
-    
+
       <div className={styles.submenu}>{home && <SubMenu />}</div>
 
       <nav className={`${styles.mobile}   ${open && styles.open}`}>
         <div className={styles.link}>
-          <Link href={"/"}>HOME</Link>
-          <Link href={"/#servicos"}>SERVIÇOS</Link>
-          <Link href={"/#contatos"}>CONTATOS</Link>
+          <Link href={"/#home"}>HOME</Link>
+          <Link href={"/#about"}>SERVIÇOS</Link>
+          <Link href={"/#contact"}>CONTATOS</Link>
         </div>
 
         {home && <SubMenu />}

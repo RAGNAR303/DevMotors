@@ -6,9 +6,9 @@ export function About({ object }: HomeProps) {
   return (
     <Container>
       <>
-        <main className={styles.container}>
+        <main className={styles.container} id="about">
           <div className={styles.containerAbout}>
-            <h1 className={styles.title}>Sobre</h1>
+            <h2 className={styles.title}>Sobre</h2>
             <p className={styles.description}>
               {object.metadata.about.description}
             </p>

@@ -8,12 +8,12 @@ interface LabelProps {
 }
 export function Label({ icon, contact, label }: LabelProps) {
   return (
-    <div className={styles.container}>
+    <label className={styles.container}>
       <i>{icon}</i>
       <div className={styles.containerLabel}>
-        <label>{label}</label>
+        <strong>{label}</strong>
         <p className={styles.contact}>{contact}</p>
       </div>
-    </div>
+    </label>
   );
 }

@@ -15,7 +15,7 @@ interface HeroProps {
 
 export function Hero({ data, icon }: { data: HeroProps; icon?: ReactNode }) {
   return (
-    <main className={styles.main}>
+    <main className={styles.main} id="home">
       <div className={styles.heroContent}>
         <h2 className={styles.title}>{data.heading}</h2>
         <a href={data.ctabutton.url} target="_blank" className={styles.link}>

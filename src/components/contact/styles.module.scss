@@ -14,26 +14,26 @@
     .containerContact {
         background: #0a0a0a;
         background: linear-gradient(300deg, #000000 0%, #3c3c3c 100%) padding-box, linear-gradient(-300deg, #000000, #3c3c3c) border-box;
-        width: 100%;
-        max-width: 800px;
+        width: 70%;
+
         min-height: 250px;
-        margin: auto;
         border-radius: 5px;
         padding: 10px;
-        border: 4px solid transparent;
+        border: 2px solid transparent;
+        box-shadow: rgba(0, 0, 0, 0.25) 0px 2px 0.0625em, rgba(0, 0, 0, 0.25) 0px 0.125em 0.5em, rgba(0, 0, 0, 0.1) 0px 0px 0px 1px inset;
 
         .title {
+            margin-top: 10px;
             color: white;
             text-align: center;
         }
 
         .contact {
             width: 100%;
-            height: 100%;
             gap: 10px;
             padding: 30px;
-            display: flex;
-            flex-wrap: wrap;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
             align-items: center;
             justify-content: space-between;
         }
@@ -42,6 +42,8 @@
     .link {
         display: flex;
         align-items: center;
+        justify-content: center;
+        text-align: center;
         gap: 5px;
         font-size: 20px;
         color: white;
@@ -57,5 +59,29 @@
 
     .link:hover {
         transform: scale(1.05);
+    }
+}
+
+
+@media screen and (max-width: 640px) {
+
+
+    .container {
+        .containerContact {
+            padding: 0;
+            width: 100%;
+
+            .contact {
+                grid-template-columns: 1fr;
+            }
+        }
+
+
+        .link {
+
+            font-size: 15px;
+
+        }
+
     }
 }

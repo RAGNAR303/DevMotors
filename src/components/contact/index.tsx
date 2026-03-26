@@ -10,7 +10,7 @@ import { PiWhatsappLogoDuotone } from "react-icons/pi";
 export function Contact({ object }: HomeProps) {
   return (
     <Container>
-      <main className={styles.container}>
+      <main className={styles.container} id="contact">
         <section className={styles.containerContact}>
           <h2 className={styles.title}>Contatos</h2>
           <div className={styles.contact}>
@@ -32,7 +32,7 @@ export function Contact({ object }: HomeProps) {
             <Label
               icon={<IoMdTime />}
               contact={object.metadata.contact.time}
-              label={"Horario de funcionamento"}
+              label={"Horário"}
             />{" "}
           </div>
         </section>
