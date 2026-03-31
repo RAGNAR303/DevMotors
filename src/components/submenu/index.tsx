@@ -1,24 +1,19 @@
+import { MenuProps } from "@/utils/type/menu.type";
 import { Button } from "../button";
 import styles from "./styles.module.scss";
 import Link from "next/link";
-export function SubMenu({ ClassName }: { ClassName?: string }) {
+export function SubMenu({ objects }: { objects: MenuProps }) {
+  console.log(objects);
+
   return (
     <ul className={`${styles.submenu} `}>
-      <li>
-        <Link href={"/pagina-1"}>
-          <Button>Troca de óleo</Button>
-        </Link>
-      </li>
-      <li>
-        <Link href={"/pagina-2"}>
-          <Button>Manutenção preventiva</Button>
-        </Link>
-      </li>
-      <li>
-        <Link href={"/pagina-3"}>
-          <Button>Alinhamento e balanceamento</Button>
-        </Link>
-      </li>
+      {objects.objects.map((item, index) => (
+        <li key={index}>
+          <Link href={`/post/${item.slug}`}>
+            <Button>{item.title}</Button>
+          </Link>
+        </li>
+      ))}
     </ul>
   );
 }

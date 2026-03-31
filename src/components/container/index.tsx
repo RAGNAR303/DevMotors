@@ -1,5 +1,9 @@
 import { ReactNode } from "react";
-import styles from './styles.module.scss'
+import styles from "./styles.module.scss";
 export function Container({ children }: { children: ReactNode }) {
-  return <section className={styles.container}>{children}</section>;
+  return (
+    <main className={styles.container}>
+      <section className={styles.section}>{children}</section>
+    </main>
+  );
 }

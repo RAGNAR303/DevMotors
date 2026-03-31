@@ -1,7 +1,10 @@
 .footer {
-    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     padding: 30px;
     margin-top: -10px;
     background: linear-gradient(300deg, #000000 0%, #3c3c3c 100%) padding-box, linear-gradient(-300deg, #000000, #3c3c3c) border-box;
     color: white;
+
 }

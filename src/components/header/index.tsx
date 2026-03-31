@@ -5,10 +5,14 @@ import styles from "./styles.module.scss";
 import { HiMenuAlt4 } from "react-icons/hi";
 import { IoClose } from "react-icons/io5";
 import { SubMenu } from "../submenu";
+import { getSubMenu } from "@/utils/api/get-data";
+import { MenuProps } from "@/utils/type/menu.type";
+
 
 export function Header({ home }: { home: boolean }) {
   const [top, setTop] = useState(true);
   const [open, setOpen] = useState(false);
+  const [menu, setMenu] = useState<MenuProps>();
 
   function scrollPage() {
     window.scrollY > 10 ? setTop(false) : setTop(true);
@@ -20,6 +24,15 @@ export function Header({ home }: { home: boolean }) {
 
     return () => window.addEventListener("scroll", scrollPage);
   }, [top]);
+
+  useEffect(() => {
+    async function loadSubMenu() {
+      const menu: MenuProps = await getSubMenu();
+
+      setMenu(menu);
+    }
+    loadSubMenu();
+  }, []);
 
   return (
     <header
@@ -43,7 +56,11 @@ export function Header({ home }: { home: boolean }) {
         </button>
       </div>
 
-      <div className={styles.submenu}>{home && <SubMenu />}</div>
+      {menu && (
+        <div className={styles.sub_menu}>
+          {home && <SubMenu objects={menu} />}
+        </div>
+      )}
 
       <nav className={`${styles.mobile}   ${open && styles.open}`}>
         <div className={styles.link}>
@@ -52,7 +69,7 @@ export function Header({ home }: { home: boolean }) {
           <Link href={"/#contact"}>CONTATOS</Link>
         </div>
 
-        {home && <SubMenu />}
+        {home && menu && <SubMenu objects={menu} />}
       </nav>
     </header>
   );

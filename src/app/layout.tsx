@@ -3,6 +3,7 @@ import "./globals.scss";
 import { Header } from "@/components/header";
 import { Footer } from "@/components/footer";
 
+
 export const metadata: Metadata = {
   title: "DevMotors - sua ofivina especilizada",
   description: "Localizada na grande são paulo",

@@ -48,10 +48,10 @@
 
 
     .container {
-        max-width: 1080px;
         width: 100%;
         display: flex;
         align-items: center;
+        padding: 0 30px;
         justify-content: space-between;
         margin: 0 auto;
 
@@ -60,7 +60,7 @@
 
         a h2 {
             font-weight: bolder;
-           
+
         }
 
         .navItem {
@@ -75,7 +75,16 @@
         }
     }
 
-   
+    .sub_menu {
+        display: flex;
+        align-items: center;
+
+
+
+        input {
+            display: none;
+        }
+    }
 }
 
 
@@ -103,11 +112,15 @@
 
 @media screen and (max-width: 640px) {
 
+    .header {
+        .sub_menu {
+            display: none;
 
-    .submenu {
-        display: none;
-        padding: 20px 10px;
+        }
+
     }
+
+
 
     .mobile {
         flex-direction: column;
@@ -136,6 +149,9 @@
     .header {
 
         .container {
+
+            padding: 0 5px;
+
             .navItem {
                 display: none;
             }
