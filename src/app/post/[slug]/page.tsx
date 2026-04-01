@@ -31,6 +31,7 @@ export default async function Page({ params }: ParamsProps) {
           active={objects[0].metadata.about.button_active}
           title={objects[0].metadata.about.button_title}
           url={objects[0].metadata.about.button_url}
+         
         />
       </Container>
     </section>

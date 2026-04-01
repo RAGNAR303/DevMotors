@@ -1,0 +1,15 @@
+.error{
+    width: 100%;
+    height: calc(100vh - 80px) ;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    flex-direction: column;
+
+
+    p{
+        color: black;
+        font-weight: bold;
+    }
+}

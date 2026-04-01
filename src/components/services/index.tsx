@@ -14,8 +14,9 @@ export function Services({ object }: HomeProps) {
               <Image
                 src={item.image.url}
                 alt="bannerSobre"
-                fill
-                sizes="(max-width: 768px) 100vw, 33vw"
+                fill={true}
+                sizes="(max-width: 768px) 100vw, (max-width: 1080px) 75vw 60vw"
+                priority={true}
                 quality={100}
                 className={styles.servicesImage}
               />

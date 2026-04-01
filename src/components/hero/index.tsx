@@ -1,6 +1,5 @@
 import Image from "next/image";
 import styles from "./styles.module.scss";
-import { HomeProps } from "@/utils/type/home.type";
 
 interface HeroProps {
   banner: string;
@@ -15,7 +14,7 @@ export function Hero({ banner, heading, resume, title, url }: HeroProps) {
     <main className={styles.main} id="home">
       <div className={styles.heroContent}>
         <h2 className={styles.title}>{heading}</h2>
-        {resume && <p>{resume}</p>}
+        {resume && <p className={styles.resume}>{resume}</p>}
         <a href={url} target="_blank" className={styles.link}>
           {/* {icon} */}
           {title}
@@ -26,9 +25,9 @@ export function Hero({ banner, heading, resume, title, url }: HeroProps) {
           src={banner}
           alt={heading}
           fill={true}
-          sizes="(max-width: 768px) 100vw, 33vw"
+          sizes="(max-width: 768px) 100vw, (max-width: 1080px) 75vw 60vw"
           quality={100}
-          priority
+          priority={true}
           className={styles.banner}
         />
       </div>

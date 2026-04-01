@@ -11,6 +11,7 @@
         display: flex;
         flex-direction: column;
         max-width: 600px;
+        gap: 15px;
 
 
 
@@ -26,6 +27,7 @@
     .aboutBanner {
         display: flex;
         position: relative;
+        object-fit: cover;
         width: 300px;
         height: 350px;
         border-radius: 10px;
@@ -45,7 +47,7 @@
 
 
 
-@media (max-width: 640px) {
+@media (max-width: 920px) {
     .container {
         flex-direction: column;
         gap: 30px;
@@ -67,8 +69,10 @@
     .container {
 
         .aboutBanner {
-            width: 200px;
-            height: 250px;
+            width: 100%;
+            max-width: 500px;
+        
+            object-fit: cover;
         }
     }
 

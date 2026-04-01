@@ -17,7 +17,7 @@
     align-items: center;
     position: absolute;
     z-index: 10;
-    gap: 30px;
+    gap: 15px;
     padding: 10px;
 }
 
@@ -25,8 +25,16 @@
     font-size: 30px;
     font-weight: bold;
     text-align: center;
-    width: 100%;
+    width: 80%;
     color: white;
+}
+
+.resume {
+    text-align: center;
+    width: 95%;
+    color: white;
+    font-size: 24px;
+
 }
 
 .link {
@@ -68,12 +76,22 @@
 
     .title {
         font-size: 24px;
-        ;
+          width: 95%;
+    }
+
+    .resume {
+        text-align: center;
+        width: 95%;
+        color: white;
+        font-size: 18px;
+
     }
 
 
     .link {
         font-size: 15px;
     }
+
+
 
 }

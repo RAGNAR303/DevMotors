@@ -4,6 +4,7 @@ export interface PostProps {
 
 
 interface SlugProps{ 
+  
     metadata: {
         banner: {
           url: string,
