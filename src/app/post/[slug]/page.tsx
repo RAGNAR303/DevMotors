@@ -1,39 +1,87 @@
 import { getPageBySlug } from "@/utils/api/get-data";
-import styles from "./styles.module.scss";
 import { PostProps } from "@/utils/type/page.type";
-import { Hero } from "@/components/hero";
-import { About } from "@/components/about";
-import { Container } from "@/components/container";
+import { Metadata } from "next";
+import { Content } from "./components";
+import { Suspense } from "react";
+import Loading from "./components/loading";
 
-interface ParamsProps {
+export interface ParamsProps {
   params: {
     slug: string;
   };
 }
 
-export default async function Page({ params }: ParamsProps) {
+export async function generateMetadata({
+  params,
+}: ParamsProps): Promise<Metadata> {
   const { slug } = await params;
   const { objects }: PostProps = await getPageBySlug(slug);
 
+  try {
+    return {
+      title: `DevMotors - ${objects[0].metadata.tittle.heading}`,
+      description: `${objects[0].metadata.tittle.resume}`,
+      keywords: [
+        "oficina",
+        "carro",
+        "veiculo",
+        "manutenção preventida",
+        "oficina especializada",
+        "manutenção veicular",
+      ],
+      openGraph: {
+        title: `DevMotors - ${objects[0].metadata.tittle.heading}`,
+        images: [`${objects[0].metadata.banner.url}`],
+      },
+      robots: {
+        index: true,
+        follow: true,
+        nocache: true,
+        googleBot: {
+          index: true,
+          follow: true,
+          noimageindex: true,
+        },
+      },
+    };
+  } catch (error) {
+    return {
+      title: "DevMotors - sua oficina especilizada",
+      description: "Localizada na grande são paulo",
+      keywords: [
+        "oficina",
+        "carro",
+        "veiculo",
+        "manutenção preventida",
+        "oficina especializada",
+        "manutenção veicular",
+      ],
+      openGraph: {
+        title: "DevMotors - sua ofivina especilizada",
+        images: [`${process.env.NEXT_PUBLIC_URL}/mecanica.jpg`],
+      },
+      robots: {
+        index: true,
+        follow: true,
+        nocache: true,
+        googleBot: {
+          index: true,
+          follow: true,
+          noimageindex: true,
+        },
+      },
+    };
+  }
+}
+
+export default async function Page({
+  params,
+}: {
+  params: Promise<{ slug: string }>;
+}) {
   return (
-    <section className={styles.section}>
-      <Hero
-        banner={objects[0].metadata.banner.url}
-        heading={objects[0].metadata.tittle.heading}
-        title={objects[0].metadata.button.text}
-        url={objects[0].metadata.button.url}
-        resume={objects[0].metadata.tittle.resume}
-      />
-      <Container>
-        <About
-          banner={objects[0].metadata.banner.url}
-          description={objects[0].metadata.about.description}
-          active={objects[0].metadata.about.button_active}
-          title={objects[0].metadata.about.button_title}
-          url={objects[0].metadata.about.button_url}
-         
-        />
-      </Container>
-    </section>
+    <Suspense fallback={<Loading />}>
+      <Content slug={(await params).slug} />
+    </Suspense>
   );
 }

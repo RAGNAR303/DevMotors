@@ -3,7 +3,7 @@ export interface PostProps {
 }
 
 
-interface SlugProps{ 
+export interface SlugProps{ 
   
     metadata: {
         banner: {
