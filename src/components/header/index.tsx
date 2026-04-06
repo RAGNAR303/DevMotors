@@ -8,7 +8,6 @@ import { SubMenu } from "../submenu";
 import { getSubMenu } from "@/utils/api/get-data";
 import { MenuProps } from "@/utils/type/menu.type";
 
-
 export function Header({ home }: { home: boolean }) {
   const [top, setTop] = useState(true);
   const [open, setOpen] = useState(false);

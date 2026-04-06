@@ -11,17 +11,18 @@ export async function Content({ slug }: { slug: string }) {
     <section className={styles.section}>
       <Hero
         banner={objects[0].metadata.banner.url}
-        heading={objects[0].metadata.tittle.heading}
+        heading={objects[0].metadata.title.heading}
         title={objects[0].metadata.button.text}
         url={objects[0].metadata.button.url}
-        resume={objects[0].metadata.tittle.resume}
+        resume={objects[0].metadata.title.resume}
       />
       <Container>
         <About
           banner={objects[0].metadata.about.banner.url}
           description={objects[0].metadata.about.description}
           active={objects[0].metadata.about.button_active}
-          title={objects[0].metadata.about.button_title}
+          AboutTitle={objects[0].metadata.about.title}
+          btnTitle={objects[0].metadata.about.button_title}
           url={objects[0].metadata.about.button_url}
         />
       </Container>

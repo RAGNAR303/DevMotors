@@ -10,7 +10,7 @@ export interface SlugProps{
           url: string,
          
         },
-        tittle: {
+        title: {
           heading: string ,
           resume: string,
         },
@@ -19,7 +19,7 @@ export interface SlugProps{
           url: string
         },
         about: {
-          titlte: string,
+          title: string,
           description: string,
           banner: {
             url: string,

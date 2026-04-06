@@ -1,6 +1,6 @@
-.error{
+.error {
     width: 100%;
-    height: calc(100vh - 80px) ;
+    height: calc(100vh - 80px);
     display: flex;
     align-items: center;
     text-align: center;
@@ -8,8 +8,12 @@
     flex-direction: column;
 
 
-    p{
+    p {
         color: black;
         font-weight: bold;
+    }
+
+    a {
+        color: #e0e0e0;
     }
 }

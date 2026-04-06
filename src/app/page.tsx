@@ -6,6 +6,7 @@ import { About } from "@/components/about";
 import { Contact } from "@/components/contact";
 import { Services } from "@/components/services";
 import { Container } from "@/components/container";
+import { Service } from "@/components/service";
 export default async function Home() {
   const { object }: HomeProps = await getDataHome();
 
@@ -19,16 +20,14 @@ export default async function Home() {
           url={object.metadata.ctabutton.url}
         />
         <Container>
-  
-       
-            <About
-              banner={object.metadata.about.banner.url}
-              description={object.metadata.about.description}
-            />
+          <About
+            banner={object.metadata.about.banner.url}
+            description={object.metadata.about.description}
+          />
 
-            <Services object={object} />
-            <Contact object={object} />
-      
+          <Services object={object} />
+          <Service object={object} />
+          <Contact object={object} />
         </Container>
       </div>
     </main>

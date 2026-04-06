@@ -1,0 +1,102 @@
+.embla {
+    overflow: hidden;
+    width: 100%;
+    padding: 20px;
+
+}
+
+.embla_container {
+    display: flex;
+    min-height: 200px;
+    gap: 10px;
+    padding: 10px;
+}
+
+.embla_slide {
+    position: relative;
+    flex: 0 0 25%;
+}
+
+.embla_slide_container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+
+}
+
+.servicesImage {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 2px 0.0625em, rgba(0, 0, 0, 0.25) 0px 0.125em 0.5em, rgba(0, 0, 0, 0.1) 0px 0px 0px 1px inset;
+    transition: all 0.5s ease-out;
+}
+
+.title {
+    margin-top: 5px;
+    font-size: 13px;
+    text-transform: uppercase;
+    text-align: center;
+    font-weight: 900;
+    z-index: 2;
+}
+
+
+.container_button {
+
+    display: flex;
+    width: 100%;
+    margin-top: auto;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    padding: 10px;
+    position: relative;
+    z-index: 10;
+}
+
+.button {
+    background: none;
+    font-size: 40px;
+    opacity: 60%;
+    transition: opacity 300ms ease;
+    position: absolute;
+    top: -150px;
+}
+
+.button:hover {
+    opacity: 100%;
+}
+
+.button_right {
+    right: 0;
+}
+
+.button_left {
+    left: 0;
+}
+
+@media (max-width: 1000px) {
+    .embla_slide {
+        position: relative;
+        flex: 0 0 33%;
+    }
+}
+
+
+@media (max-width: 600px) {
+    .embla_slide {
+        position: relative;
+        flex: 0 0 50%;
+    }
+}
+
+
+
+@media (max-width: 400px) {
+    .embla_slide {
+        position: relative;
+        flex: 0 0 100%;
+    }
+}

@@ -1,25 +1,37 @@
 import styles from "./styles.module.scss";
 import Image from "next/image";
 import { Button } from "../button";
+import { FaPhone } from "react-icons/fa6";
 
 interface AboutProps {
   banner: string;
   description: string;
   active?: boolean;
-  title?: string;
+  btnTitle?: string;
+  AboutTitle?: string;
   url?: string;
 }
 
-export function About({ banner, description, active, title, url }: AboutProps) {
+export function About({
+  banner,
+  description,
+  active,
+  btnTitle,
+  AboutTitle,
+  url,
+}: AboutProps) {
   return (
     <>
       <main className={styles.container} id="about">
         <div className={styles.containerAbout}>
-          <h2>Sobre Serviço</h2>
+          {AboutTitle ? <h2>Sobre {AboutTitle}</h2> : <h2>Sobre Serviço</h2>}
+
           <p className={styles.description}>{description}</p>
           {active && (
-            <a href={url} target="">
-              <Button>{title}</Button>
+            <a href={url} target="_blank">
+              <Button icon={<FaPhone />} style="green">
+                Agende {AboutTitle}
+              </Button>
             </a>
           )}
         </div>

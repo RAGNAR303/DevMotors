@@ -51,7 +51,7 @@ export async function getPageBySlug(slug: string) {
     query: JSON.stringify({
       slug: slug,
     }),
-    props: "slug.title.metadata",
+    props: "slug,title,metadata",
     read_key: process.env.COSMIC_READ_KEY as string,
   });
 

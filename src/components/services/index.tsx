@@ -1,13 +1,14 @@
-import { Container } from "@/components/container";
 import { HomeProps } from "@/utils/type/home.type";
 import styles from "./styles.module.scss";
 import Image from "next/image";
+import Carousel from "./components";
 
 export function Services({ object }: HomeProps) {
   return (
     <>
       <h2 className={styles.servicesTitle}>Conheça nossos serviços</h2>
       <section className={styles.servicesContainer}>
+   
         {object.metadata.services.map((item, index) => (
           <article key={index} className={styles.servicesCard}>
             <div className={styles.services}>
@@ -25,6 +26,7 @@ export function Services({ object }: HomeProps) {
           </article>
         ))}
       </section>
+ 
     </>
   );
 }
