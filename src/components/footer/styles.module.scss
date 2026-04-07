@@ -2,12 +2,50 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    flex-direction: column;
+    width: 100%;
     padding: 30px;
+    gap: 20px;
     margin-top: -10px;
     background: linear-gradient(300deg, #000000 0%, #3c3c3c 100%) padding-box, linear-gradient(-300deg, #000000, #3c3c3c) border-box;
     color: white;
 
-    p{
+    p {
         text-align: center;
+    }
+
+    .links_container {
+        display: flex;
+        width: 50%;
+        justify-content: space-between;
+
+        a {
+            color: #e0e0e098;
+        }
+
+        a:hover {
+            color: #e0e0e0;
+        }
+
+        p {
+            font-size: 20px;
+            font-weight: 900;
+            text-transform: uppercase;
+        }
+
+
+
+        div {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+
+        ul {
+            display: flex;
+            flex-direction: column;
+
+        }
     }
 }

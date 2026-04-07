@@ -15,13 +15,17 @@
 .embla_slide {
     position: relative;
     flex: 0 0 25%;
+    overflow: hidden;
+    border-radius: 5px;
 }
 
 .embla_slide_container {
     position: relative;
     width: 100%;
     height: 100%;
+    overflow: hidden;
 
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 2px 0.0625em, rgba(0, 0, 0, 0.25) 0px 0.125em 0.5em, rgba(0, 0, 0, 0.1) 0px 0px 0px 1px inset;
 }
 
 .servicesImage {
@@ -29,8 +33,11 @@
     width: 100%;
     height: 100%;
     object-fit: cover;
-    box-shadow: rgba(0, 0, 0, 0.25) 0px 2px 0.0625em, rgba(0, 0, 0, 0.25) 0px 0.125em 0.5em, rgba(0, 0, 0, 0.1) 0px 0px 0px 1px inset;
     transition: all 0.5s ease-out;
+}
+
+.servicesImage:hover {
+    transform: scale(1.04);
 }
 
 .title {
@@ -40,6 +47,11 @@
     text-align: center;
     font-weight: 900;
     z-index: 2;
+    position: absolute;
+    bottom: 0;
+    background: #000000b2;
+    color: #e0e0e0;
+    width: 100%;
 }
 
 
@@ -70,14 +82,29 @@
 }
 
 .button_right {
-    right: 0;
+    right: -15px;
 }
 
 .button_left {
-    left: 0;
+    left: -25px;
 }
 
 @media (max-width: 1000px) {
+
+
+    .button_right {
+        right: 0px;
+    }
+
+    .button_left {
+        left: 0px;
+    }
+
+
+    .embla {
+        width: 90%;
+    }
+
     .embla_slide {
         position: relative;
         flex: 0 0 33%;

@@ -25,7 +25,6 @@ export default async function Home() {
             description={object.metadata.about.description}
           />
 
-          <Services object={object} />
           <Service object={object} />
           <Contact object={object} />
         </Container>

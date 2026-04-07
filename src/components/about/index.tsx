@@ -24,7 +24,7 @@ export function About({
     <>
       <main className={styles.container} id="about">
         <div className={styles.containerAbout}>
-          {AboutTitle ? <h2>Sobre {AboutTitle}</h2> : <h2>Sobre Serviço</h2>}
+          {AboutTitle ? <h2>Sobre {AboutTitle}</h2> : <h2>Sobre</h2>}
 
           <p className={styles.description}>{description}</p>
           {active && (

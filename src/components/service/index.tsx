@@ -33,7 +33,7 @@ export function Service({ object }: HomeProps) {
                   sizes="(max-width: 768px) 100vw, (max-width: 1080px) 75vw 60vw"
                   priority={true}
                   quality={100}
-                  className={styles.serviceImage}
+                  className={styles.servicesImage}
                 />
               </div>
               <p className={styles.title}>{item.title}</p>

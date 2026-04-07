@@ -1,5 +1,6 @@
 import Image from "next/image";
 import styles from "./styles.module.scss";
+import { PiWhatsappLogoDuotone } from "react-icons/pi";
 
 interface HeroProps {
   banner: string;
@@ -16,7 +17,7 @@ export function Hero({ banner, heading, resume, title, url }: HeroProps) {
         <h2 className={styles.title}>{heading}</h2>
         {resume && <p className={styles.resume}>{resume}</p>}
         <a href={url} target="_blank" className={styles.link}>
-          {/* {icon} */}
+          {<PiWhatsappLogoDuotone />}
           {title}
         </a>
       </div>
