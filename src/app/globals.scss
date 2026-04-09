@@ -1,6 +1,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Rubik+Mono+One&display=swap');
 
 
+:root {
+  --background: #ffffff;
+  --font-zinc: #1a1a1a;
+  --font-white: #e0e0e0;
+  --border-10: 10px;
+  --border-5: 5px;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -12,8 +20,9 @@ body {
   width: 100%;
   height: 100vh;
   scroll-behavior: smooth;
-  background: #ffffff;
-  color: rgb(26, 26, 26);
+  background: var(--background);
+  color: var(--font-zinc);
+
   font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 

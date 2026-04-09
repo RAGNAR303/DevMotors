@@ -7,6 +7,7 @@ import { IoClose } from "react-icons/io5";
 import { SubMenu } from "../submenu";
 import { getSubMenu } from "@/utils/api/get-data";
 import { MenuProps } from "@/utils/type/menu.type";
+import { MdKeyboardArrowDown } from "react-icons/md";
 
 export function Header({ home }: { home: boolean }) {
   const [top, setTop] = useState(true);
@@ -15,7 +16,7 @@ export function Header({ home }: { home: boolean }) {
 
   function scrollPage() {
     window.scrollY > 10 ? setTop(false) : setTop(true);
-    console.log("fex scroll");
+   
   }
 
   useEffect(() => {
@@ -45,12 +46,16 @@ export function Header({ home }: { home: boolean }) {
 
           <nav className={styles.navItem}>
             <Link href={"/#home"}>HOME</Link>
-            <Link href={"/#about"}>SERVIÇOS</Link>
+            <div className={styles.service}>
+              <Link href={"/#about"}>SERVIÇOS</Link>
+              <MdKeyboardArrowDown className={styles.arrow} size={30} />
+            </div>
+
             <Link href={"/#contact"}>CONTATOS</Link>
           </nav>
         </div>
 
-        <button className={styles.hiddenMenu} onClick={() => setOpen(!open)}>
+        <button className={styles.btn_menu} onClick={() => setOpen(!open)}>
           {open ? <IoClose /> : <HiMenuAlt4 />}
         </button>
       </div>

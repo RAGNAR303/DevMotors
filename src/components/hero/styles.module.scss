@@ -26,13 +26,13 @@
     font-weight: bold;
     text-align: center;
     width: 80%;
-    color: white;
+    color: var(--font-white);
 }
 
 .resume {
     text-align: center;
     width: 95%;
-    color: white;
+    color: var(--font-white);
     font-size: 24px;
 
 }
@@ -42,10 +42,10 @@
     align-items: center;
     gap: 5px;
     font-size: 20px;
-    color: white;
+    color: var(--font-white);
     background-color: #008f00;
     padding: 5px 25px;
-    border-radius: 5px;
+    border-radius: var(--border-5);
     font-weight: lighter;
     box-shadow: 1px 2px 10px #00000084 inset 1px 2px 10px #00000084;
     -webkit-box-shadow: 1px 2px 10px #00000084;
@@ -76,13 +76,13 @@
 
     .title {
         font-size: 24px;
-          width: 95%;
+        width: 95%;
     }
 
     .resume {
         text-align: center;
         width: 95%;
-        color: white;
+        color: var(--font-white);
         font-size: 18px;
 
     }
